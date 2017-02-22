@@ -1,0 +1,6 @@
+application/logs/*
+.htaccess
+data/upload/*
+*.php-tmp
+.DS_Store
+._.DS_Store

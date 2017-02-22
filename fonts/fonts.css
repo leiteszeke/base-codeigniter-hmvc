@@ -1,0 +1,73 @@
+@font-face {
+  font-family: 'Lato-Black';
+  src: url('Lato-Black.eot');
+  src: url('Lato-Black.woff2') format('woff2'),
+       url('Lato-Black.woff') format('woff'),
+       url('Lato-Black.ttf') format('truetype'),
+       url('Lato-Black.svg#Lato-Black') format('svg'),
+       url('Lato-Black.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gotham-Ultra';
+  src: url('Gotham-Ultra.eot');
+  src: url('Gotham-Ultra.eot?#iefix') format('embedded-opentype'),
+       url('Gotham-Ultra.woff2') format('woff2'),
+       url('Gotham-Ultra.woff') format('woff'),
+       url('Gotham-Ultra.ttf') format('truetype'),
+       url('Gotham-Ultra.svg#Gotham-Ultra') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham-Medium';
+  src: url('Gotham-Medium.eot');
+  src: url('Gotham-Medium.eot?#iefix') format('embedded-opentype'),
+       url('Gotham-Medium.woff2') format('woff2'),
+       url('Gotham-Medium.woff') format('woff'),
+       url('Gotham-Medium.ttf') format('truetype'),
+       url('Gotham-Medium.svg#Gotham-Medium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'FRAMDCN';
+    src: url('FRAMDCN.eot');
+    src: url('FRAMDCN.eot?#iefix') format('embedded-opentype'),
+         url('FRAMDCN.woff2') format('woff2'),
+         url('FRAMDCN.woff') format('woff'),
+         url('FRAMDCN.ttf') format('truetype'),
+         url('FRAMDCN.svg#FRAMDCN') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Lato-Light';
+    src: url('Lato-Light.eot');
+    src: url('Lato-Light.eot?#iefix') format('embedded-opentype'),
+         url('Lato-Light.woff2') format('woff2'),
+         url('Lato-Light.woff') format('woff'),
+         url('Lato-Light.ttf') format('truetype'),
+         url('Lato-Light.svg#Lato-Light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+  font-family: 'Lato-Regular';
+  src: url('Lato-Regular.eot');
+  src: url('Lato-Regular.woff2') format('woff2'),
+       url('Lato-Regular.woff') format('woff'),
+       url('Lato-Regular.ttf') format('truetype'),
+       url('Lato-Regular.svg#Lato-Regular') format('svg'),
+       url('Lato-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
