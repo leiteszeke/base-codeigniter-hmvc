@@ -20,22 +20,12 @@ switch(APP_ENV){
 		$base = "";
 		break;
 	case "dev":
-		$host = "";
-		$user = "";
-		$pass = "";
-		$base = "";
-		break;
 	case "loc":
-		$host = "190.191.242.44";
-		$user = "root";
-		$pass = "Vaseli490na21";
-		$base = "DM_estructura_base";
-		break;
 	default:
-		$host = "190.191.242.44";
+		$host = "locahost";
 		$user = "root";
-		$pass = "Vaseli490na21";
-		$base = "DM_estructura_base";
+		$pass = "";
+		$base = "estructura-ci-hmvc";
 		break;
 }
 

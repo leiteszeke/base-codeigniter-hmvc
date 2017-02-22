@@ -1,5 +1,5 @@
-<?php defined('BASEPATH') OR exit('No direct script access allowed');
-
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
 /*
 | -------------------------------------------------------------------
 |  Auto-load Packages
@@ -12,7 +12,7 @@ $autoload['packages'] = array();
 |  Auto-load Libraries
 | -------------------------------------------------------------------
 */
-$autoload['libraries'] = array('parser', 'database', 'session', 'paginador', 'reportes');
+$autoload['libraries'] = array('parser', 'database', 'session');
 
 /*
 | -------------------------------------------------------------------
@@ -26,7 +26,7 @@ $autoload['drivers'] = array();
 |  Auto-load Helper Files
 | -------------------------------------------------------------------
 */
-$autoload['helper'] = array('url');
+$autoload['helper'] = array('form', 'url');
 
 /*
 | -------------------------------------------------------------------
@@ -47,4 +47,4 @@ $autoload['language'] = array();
 |  Auto-load Models
 | -------------------------------------------------------------------
 */
-$autoload['model'] = array();
+$autoload['model'] = array('System_model');

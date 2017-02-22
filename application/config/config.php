@@ -3,11 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 date_default_timezone_set('America/Argentina/Buenos_Aires');
 !defined("APP_ENV") ? define("APP_ENV", getenv('APP_ENV')) : "";
 
-$config["db_prefix"]       = "";
-$config["limit_admins"]    = 15;
-$config["limit_secciones"] = 15;
-$config["limit_opciones"]  = 15;
-$config["limit_permisos"]  = 15;
+echo APP_ENV;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,24 +22,11 @@ if(APP_ENV == "prod"){
 	$config['base_path'] = $_SERVER['DOCUMENT_ROOT'] . ''; // path
 }else{
 	error_reporting(E_ALL);
-	$config['base_url']	 = $config['protocolo'] . $_SERVER['HTTP_HOST'] .'/estructura-base-sitios-ci-hmvc/'; // host de la app
-	$config['base_path'] = $_SERVER['DOCUMENT_ROOT'] . '/estructura-base-sitios-ci-hmvc/'; // path
+	$config['base_url']	 = $config['protocolo'] . $_SERVER['HTTP_HOST'] .'/estructura-ci-hmvc/'; // host de la app
+	$config['base_path'] = $_SERVER['DOCUMENT_ROOT'] . '/estructura-ci-hmvc/'; // path
 }
 
-$config['site_name'] 	= "Estructura Básica DM";
-
-/*
-|--------------------------------------------------------------------------
-| Metadata
-|--------------------------------------------------------------------------
-*/
-$config['og_title'] 	    = "Estructura Básica DM";
-$config['og_url'] 		    = $config['base_url'];
-$config['og_image'] 	    = $config['base_url'] . "images/fbog.png?v=1";
-$config['og_description']   = "Beber con moderación. Prohibida su venta a menores de 18 años.";
-$config['meta_keywords']    = "estructura, dm";
-$config['meta_description'] = "Estructura Básica DM";
-
+$config['site_name'] 	= "Estructura Básica HMVC";
 
 /*
 |--------------------------------------------------------------------------
@@ -244,7 +227,7 @@ $config['log_threshold'] = 0;
 | application/logs/ directory. Use a full server path with trailing slash.
 |
 */
-$config['log_path'] = '';
+$config['log_path'] = 'logs';
 
 /*
 |--------------------------------------------------------------------------
