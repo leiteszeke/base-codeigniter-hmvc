@@ -1,32 +1,29 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-date_default_timezone_set('America/Argentina/Buenos_Aires');
-!defined("APP_ENV") ? define("APP_ENV", getenv('APP_ENV')) : "";
 
-echo APP_ENV;
+$autoload = __DIR__ . '/../../vendor/autoload.php';
+require_once($autoload);
+
+$dotenv = new Dotenv\Dotenv(__DIR__ . '/../../');
+$dotenv->load();
 
 /*
 |--------------------------------------------------------------------------
 | Base Site URL
 |--------------------------------------------------------------------------
 */
-$config['protocolo'] 	= (isset($_SERVER['HTTPS'])) ? "https://" : "http://"; // capturo el protocolo para contenidos seguros
+$config['protocolo'] 	= (isset($_SERVER['HTTPS'])) ? "https://" : "http://";
 
-if(APP_ENV == "prod"){
-	error_reporting(0);
-	$config['base_url']	 = $config['protocolo'] . '/'; // host de la app
-	$config['base_path'] = $_SERVER['DOCUMENT_ROOT'] . '/'; // path
-}elseif(APP_ENV == "dev"){
-	error_reporting(E_ALL);
-	$config['base_url']	 = $config['protocolo'] . ''; // host de la app
-	$config['base_path'] = $_SERVER['DOCUMENT_ROOT'] . ''; // path
-}else{
-	error_reporting(E_ALL);
-	$config['base_url']	 = $config['protocolo'] . $_SERVER['HTTP_HOST'] .'/estructura-ci-hmvc/'; // host de la app
-	$config['base_path'] = $_SERVER['DOCUMENT_ROOT'] . '/estructura-ci-hmvc/'; // path
-}
+if(getenv('ERROR_REPORTING'))
+  error_reporting(E_ALL);
+else
+  error_reporting(0);
+  
+date_default_timezone_set(getenv('TIMEZONE'));
 
-$config['site_name'] 	= "Estructura Básica HMVC";
+$config['base_url']	 = $config['protocolo'] . getenv('BASE_URL');
+$config['base_path'] = getenv('BASE_PATH');
+$config['site_name'] = "Estructura Básica HMVC";
 
 /*
 |--------------------------------------------------------------------------
@@ -139,7 +136,7 @@ $config['subclass_prefix'] = 'MY_';
 | Note: This will NOT disable or override the CodeIgniter-specific
 |	autoloading (application/config/autoload.php)
 */
-$config['composer_autoload'] = FALSE;
+$config['composer_autoload'] = $autoload;
 
 /*
 |--------------------------------------------------------------------------

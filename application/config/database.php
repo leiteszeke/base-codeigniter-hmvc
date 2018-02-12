@@ -1,6 +1,8 @@
 <?php
 	defined('BASEPATH') OR exit('No direct script access allowed');
-	!defined("APP_ENV") ? define("APP_ENV", getenv('APP_ENV')) : "";
+	
+	$dotenv = new Dotenv\Dotenv(__DIR__ . '/../../');
+	$dotenv->load();	
 
 /*
 | -------------------------------------------------------------------
@@ -12,27 +14,10 @@ $active_group = 'default';
 $active_record = TRUE;
 $query_builder = TRUE;
 
-switch(APP_ENV){
-	case "prod":
-		$host = "";
-		$user = "";
-		$pass = "";
-		$base = "";
-		break;
-	case "dev":
-	case "loc":
-	default:
-		$host = "locahost";
-		$user = "root";
-		$pass = "";
-		$base = "estructura-ci-hmvc";
-		break;
-}
-
-$db['default']['hostname'] = $host;
-$db['default']['username'] = $user;
-$db['default']['password'] = $pass;
-$db['default']['database'] = $base;
+$db['default']['hostname'] = getenv('DB_HOST');
+$db['default']['username'] = getenv('DB_USER');
+$db['default']['password'] = getenv('DB_PASS');
+$db['default']['database'] = getenv('DB_BASE');
 $db['default']['dsn']	= '';
 $db['default']['dbdriver'] = 'mysqli';
 $db['default']['dbprefix'] = '';
