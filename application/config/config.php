@@ -15,7 +15,7 @@ $dotenv->load();
 $config['protocolo'] 	= (isset($_SERVER['HTTPS'])) ? "https://" : "http://";
 
 if(getenv('ERROR_REPORTING'))
-  error_reporting(E_ALL);
+  error_reporting(E_ERROR | E_WARNING | E_PARSE);
 else
   error_reporting(0);
   

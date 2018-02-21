@@ -19,7 +19,7 @@ $db['default']['username'] = getenv('DB_USER');
 $db['default']['password'] = getenv('DB_PASS');
 $db['default']['database'] = getenv('DB_BASE');
 $db['default']['dsn']	= '';
-$db['default']['dbdriver'] = 'mysqli';
+$db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = FALSE;
 $db['default']['db_debug'] = (ENVIRONMENT !== 'production');

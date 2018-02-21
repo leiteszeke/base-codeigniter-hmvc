@@ -12,7 +12,7 @@ $autoload['packages'] = array();
 |  Auto-load Libraries
 | -------------------------------------------------------------------
 */
-$autoload['libraries'] = array('parser', 'database', 'session', 'paginador', 'reportes');
+$autoload['libraries'] = array('parser', 'database', 'session', 'paginador', 'reportes', 'activerecord');
 
 /*
 | -------------------------------------------------------------------
